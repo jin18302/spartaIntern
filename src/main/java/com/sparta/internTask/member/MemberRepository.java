@@ -1,6 +1,5 @@
-package com.sparta.internTask.repository;
+package com.sparta.internTask.member;
 
-import com.sparta.internTask.entity.Member;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

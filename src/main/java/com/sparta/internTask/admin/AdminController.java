@@ -1,7 +1,6 @@
-package com.sparta.internTask.controller;
+package com.sparta.internTask.admin;
 
 import com.sparta.internTask.annotation.RequireRole;
-import com.sparta.internTask.service.AdminService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.sparta.internTask.dto;
+package com.sparta.internTask.auth.dto;
 
 import jakarta.validation.constraints.*;
 

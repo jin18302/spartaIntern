@@ -1,4 +1,4 @@
-package com.sparta.internTask.entity;
+package com.sparta.internTask.member;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

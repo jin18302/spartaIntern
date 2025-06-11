@@ -1,6 +1,6 @@
-package com.sparta.internTask.dto;
+package com.sparta.internTask.auth.dto;
 
-import com.sparta.internTask.entity.Member;
+import com.sparta.internTask.member.Member;
 
 public record SignUpResponse(Long id, String email, String nickname) {
 

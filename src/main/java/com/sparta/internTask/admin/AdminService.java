@@ -1,4 +1,4 @@
-package com.sparta.internTask.service;
+package com.sparta.internTask.admin;
 
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,9 @@
-package com.sparta.internTask.controller;
+package com.sparta.internTask.auth;
 
-import com.sparta.internTask.dto.LoginRequest;
-import com.sparta.internTask.dto.LoginResponse;
-import com.sparta.internTask.dto.SignUpRequest;
-import com.sparta.internTask.dto.SignUpResponse;
-import com.sparta.internTask.service.AuthService;
+import com.sparta.internTask.auth.dto.LoginRequest;
+import com.sparta.internTask.auth.dto.LoginResponse;
+import com.sparta.internTask.auth.dto.SignUpRequest;
+import com.sparta.internTask.auth.dto.SignUpResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

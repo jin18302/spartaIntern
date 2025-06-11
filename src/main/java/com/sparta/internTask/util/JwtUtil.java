@@ -1,6 +1,6 @@
 package com.sparta.internTask.util;
 
-import com.sparta.internTask.entity.Authority;
+import com.sparta.internTask.member.Authority;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

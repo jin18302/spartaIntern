@@ -1,4 +1,4 @@
-package com.sparta.internTask.entity;
+package com.sparta.internTask.member;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

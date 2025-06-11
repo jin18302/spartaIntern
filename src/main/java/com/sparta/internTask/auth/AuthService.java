@@ -1,19 +1,18 @@
-package com.sparta.internTask.service;
+package com.sparta.internTask.auth;
 
-import com.sparta.internTask.dto.LoginRequest;
-import com.sparta.internTask.dto.LoginResponse;
-import com.sparta.internTask.dto.SignUpRequest;
-import com.sparta.internTask.dto.SignUpResponse;
-import com.sparta.internTask.entity.Authority;
-import com.sparta.internTask.entity.Member;
+import com.sparta.internTask.auth.dto.LoginRequest;
+import com.sparta.internTask.auth.dto.LoginResponse;
+import com.sparta.internTask.auth.dto.SignUpRequest;
+import com.sparta.internTask.auth.dto.SignUpResponse;
+import com.sparta.internTask.member.Authority;
+import com.sparta.internTask.member.Member;
 import com.sparta.internTask.exception.BadRequestException;
 import com.sparta.internTask.exception.ErrorCode;
 import com.sparta.internTask.exception.NotFoundException;
 import com.sparta.internTask.exception.UnauthorizedException;
-import com.sparta.internTask.repository.MemberRepository;
+import com.sparta.internTask.member.MemberRepository;
 import com.sparta.internTask.util.JwtUtil;
 import com.sparta.internTask.util.PasswordEncoder;
-import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
