@@ -50,9 +50,9 @@ public class JwtFilter implements Filter {
                 throw new InvalidClassException("잘못된 JWT 토큰입니다.");
             }
 
-            httpRequest.setAttribute("userId", Long.parseLong(claims.getSubject()));
+            httpRequest.setAttribute("memberId", Long.parseLong(claims.getSubject()));
             httpRequest.setAttribute("email", claims.get("email"));
-            httpRequest.setAttribute("userRole", claims.get("userRole"));
+            httpRequest.setAttribute("authority", claims.get("authority"));
 
             chain.doFilter(request, response);
         } catch (SecurityException | MalformedJwtException e) {
