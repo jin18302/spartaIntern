@@ -29,7 +29,7 @@ public class AuthService {
     public SignUpResponse signup(SignUpRequest request) {
         if(memberRepository.existEmail(request.email())){throw new com.sparta.internTask.exception.BadRequestException(ErrorCode.DUPLICATE_EMAIL);}
         if(memberRepository.existNickName(request.nickName())){throw new BadRequestException(ErrorCode.DUPLICATE_NICK_NAME);}
-        if(memberRepository.existPhoneNumber(request.nickName())){throw new BadRequestException(ErrorCode.DUPLICATE_PHONE_NUMBER);}
+        if(memberRepository.existPhoneNumber(request.phoneNumber())){throw new BadRequestException(ErrorCode.DUPLICATE_PHONE_NUMBER);}
 
         String enCodedPassword = passwordEncoder.encode(request.password());
         Authority authority = Authority.of(request.authority());
