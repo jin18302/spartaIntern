@@ -36,6 +36,14 @@ public class JwtFilter implements Filter {
             return;
         }
 
+        if (url.startsWith("/swagger-ui")
+            || url.startsWith("/v3/api-docs")
+            || url.startsWith("/swagger-resources")
+            || url.equals("/swagger-ui.html")) {
+            chain.doFilter(request, response);
+            return;
+        }
+
         String bearerJwt = httpRequest.getHeader("Authorization");
 
         if (bearerJwt == null) {

@@ -1,9 +1,12 @@
 package com.sparta.internTask.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+@Component
 public class MemberRepositoryImpl implements MemberRepository{
     private final Map<Long, Member> inMemory = new HashMap<>();
     private Long id = 1L;
