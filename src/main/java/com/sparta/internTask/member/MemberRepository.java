@@ -1,8 +1,10 @@
 package com.sparta.internTask.member;
 
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+@Repository
 public interface MemberRepository {
     Member save(Member member);
 

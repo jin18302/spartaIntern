@@ -10,7 +10,7 @@ import com.sparta.internTask.exception.NotFoundException;
 import com.sparta.internTask.exception.UnauthorizedException;
 import com.sparta.internTask.member.Authority;
 import com.sparta.internTask.member.Member;
-import com.sparta.internTask.member.MemberRepositoryImpl;
+import com.sparta.internTask.member.MemberRepository;
 import com.sparta.internTask.util.JwtUtil;
 import com.sparta.internTask.util.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class AuthService {
 
-    private final MemberRepositoryImpl memberRepository;
+    private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
 
