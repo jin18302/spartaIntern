@@ -6,14 +6,21 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.servers.Server;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 @Configuration
 public class SwaggerConfig {
+
+    @Value("${swagger.server-url}")
+    private String swaggerServerUrl;
+
     @Bean
     public OpenAPI openAPI() {
-
         Info info = new Info()
                 .title("JWT를 사용한 인증 인가 API")
                 .version("v1.0.0")
@@ -22,7 +29,6 @@ public class SwaggerConfig {
                         .name("팀 TurtleMart")
                         .email("support@turtlemart.com"));
 
-        // 🔐 SecurityScheme 설정 (JWT 토큰 입력 가능하게 만드는 부분)
         SecurityScheme bearerAuth = new SecurityScheme()
                 .type(SecurityScheme.Type.HTTP)
                 .scheme("bearer")
@@ -32,8 +38,11 @@ public class SwaggerConfig {
 
         return new OpenAPI()
                 .info(info)
-                .addSecurityItem(new SecurityRequirement().addList("bearerAuth")) // << Authorize 버튼 연동
-                .components(new Components().addSecuritySchemes("bearerAuth", bearerAuth));
+                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
+                .components(new Components().addSecuritySchemes("bearerAuth", bearerAuth))
+                .servers(List.of(
+                        new Server().url(swaggerServerUrl).description("EC2 서버")
+                ));
     }
 
 }
